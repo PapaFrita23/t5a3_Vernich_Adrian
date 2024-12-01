@@ -134,7 +134,7 @@ protected constructor(context: Context?) :
             private set
 
         //nombre de la base de datos
-        private const val database = "MiBanco"
+        private const val database = "adt5_practica2"
 
         //versión de la base de datos
         private const val version = 11
