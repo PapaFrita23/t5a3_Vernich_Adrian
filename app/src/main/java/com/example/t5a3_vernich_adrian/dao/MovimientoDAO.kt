@@ -178,8 +178,10 @@ class MovimientoDAO : PojoDAO {
 
     fun getMovimientosTipo(cuenta: Cuenta?, tipo: Int): ArrayList<*> {
         val listaMovimientos: ArrayList<Movimiento> = ArrayList<Movimiento>()
+
         val condicion =
             "idcuentaorigen=" + String.valueOf(cuenta?.getId() ?: -1) + " AND tipo = " + tipo.toString()
+
         val columnas = arrayOf(
             "id",
             "tipo",
@@ -189,8 +191,9 @@ class MovimientoDAO : PojoDAO {
             "idcuentaorigen",
             "idcuentadestino"
         )
-        val cursor: Cursor? =
-            MiBD.dB?.query("movimientos", columnas, condicion, null, null, null, null) ?: null
+
+        val cursor: Cursor? = MiBD.dB?.query("movimientos", columnas, condicion, null, null, null, null) ?: null
+
         if (cursor?.moveToFirst() == true) {
             //Recorremos el cursor hasta que no haya más registros
             do {
@@ -203,7 +206,6 @@ class MovimientoDAO : PojoDAO {
 
                 // Asignamos la cuenta de origen
                 c.setCuentaOrigen(cuenta)
-
 
                 // Asignamos la cuenta de destino
                 var a = Cuenta()
@@ -219,6 +221,7 @@ class MovimientoDAO : PojoDAO {
                 listaMovimientos.add(c)
             } while (cursor.moveToNext())
         }
+
         return listaMovimientos
     }
 }

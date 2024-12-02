@@ -1,4 +1,4 @@
-package com.example.t5a3_vernich_adrian
+package com.example.t5a3_vernich_adrian.activities
 
 import android.os.Bundle
 import android.view.View
@@ -10,10 +10,10 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.t5a3_vernich_adrian.R
 import com.example.t5a3_vernich_adrian.databinding.ActivityTransferBinding
 
 class TransferActivity : AppCompatActivity() {
