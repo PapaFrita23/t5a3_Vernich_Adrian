@@ -39,7 +39,7 @@ class CuentaAdapter(private val listaCuentas: ArrayList<Cuenta>, private val lis
         with(holder){
             setListener(cuenta)
 
-            binding.txtName.text = cuenta.getCliente()?.getNombre()
+            binding.txtName.text = cuenta.getNumeroCuenta()
             binding.txtMoney.text = cuenta.getSaldoActual().toString()
             Glide.with(context)
                 .load(R.drawable.banco)
