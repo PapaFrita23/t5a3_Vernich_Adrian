@@ -113,6 +113,12 @@ class TransferActivity : AppCompatActivity() {
             val justificante = if (checkboxJustificante.isChecked) "Sí" else "No"
 
             if (importe.isNotBlank() && cuentaDestino.isNotBlank()) {
+                if (checkboxJustificante.isChecked) {
+                    val mensaje = "Cuenta Origen: $cuentaOrigen\nCuenta Destino: $cuentaDestino\nImporte: $importe $divisa\nJustificante: $justificante"
+                    Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Transferencia realizada sin justificante", Toast.LENGTH_LONG).show()
+                }
                 val mensaje = "Cuenta Origen: $cuentaOrigen\nCuenta Destino: $cuentaDestino\nImporte: $importe $divisa\nJustificante: $justificante"
                 Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
             } else {
