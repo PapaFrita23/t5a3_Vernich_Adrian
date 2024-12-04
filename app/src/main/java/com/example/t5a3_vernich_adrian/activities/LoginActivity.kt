@@ -50,5 +50,11 @@ class LoginActivity : AppCompatActivity() {
             intent.putExtra("Cliente", cliente)
             startActivity(intent)
         }
+
+        binding.btnMovimientos.setOnClickListener {
+            val intent = Intent(this, MovimientoActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
     }
 }

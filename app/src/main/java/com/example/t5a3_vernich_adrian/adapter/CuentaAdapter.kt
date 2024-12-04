@@ -41,6 +41,12 @@ class CuentaAdapter(private val listaCuentas: ArrayList<Cuenta>, private val lis
 
             binding.txtName.text = cuenta.getNumeroCuenta()
             binding.txtMoney.text = cuenta.getSaldoActual().toString()
+            if (cuenta.getSaldoActual()!! < 0) {
+                binding.txtMoney.setTextColor(context.resources.getColor(R.color.red))
+            } else {
+                binding.txtMoney.setTextColor(context.resources.getColor(R.color.green))
+            }
+
             Glide.with(context)
                 .load(R.drawable.banco)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)

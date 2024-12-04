@@ -27,7 +27,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/banco"
+                android:src="@drawable/cerdo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
@@ -44,26 +44,27 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/txtName"
+                    android:id="@+id/txtNameM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="Nombre Completo"
+                    tools:text="Nombre movimiento"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center"
                     android:maxLines="1"
-                    android:ellipsize="end" />
+                    android:ellipsize="end"/>
 
                 <TextView
-                    android:id="@+id/txtMoney"
+                    android:id="@+id/txtDatosM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="Dinero Cuenta"
+                    android:layout_marginTop="8dp"
+                    tools:text="Datos Movimientos"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center"
                     android:maxLines="1"
-                    android:ellipsize="end" />
+                    android:ellipsize="end"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
