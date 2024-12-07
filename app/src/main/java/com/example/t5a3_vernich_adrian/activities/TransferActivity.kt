@@ -108,6 +108,7 @@ class TransferActivity : AppCompatActivity() {
             } else {
                 editTextCuentaDestino.text.toString()
             }
+
             val importe = txtDinero.text.toString()
             val divisa = spMonedas.selectedItem.toString()
             val justificante = if (checkboxJustificante.isChecked) "Sí" else "No"
@@ -119,6 +120,7 @@ class TransferActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Transferencia realizada sin justificante", Toast.LENGTH_LONG).show()
                 }
+
                 val mensaje = "Cuenta Origen: $cuentaOrigen\nCuenta Destino: $cuentaDestino\nImporte: $importe $divisa\nJustificante: $justificante"
                 Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
             } else {
